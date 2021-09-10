@@ -8,15 +8,22 @@
   <div v-else>Loading ...</div>
 </template>
 <script>
+import { mapActions } from "vuex";
+import { mapGetters } from "vuex";
 export default {
   name: "Gallery",
   computed: {
-    photos() {
-      return this.$store.getters.photos;
-    },
+    // photos() {
+    //   return this.$store.getters.photos;
+    // },
+    ...mapGetters(["photos"]),
+  },
+  methods: {
+    ...mapActions(["getPhotos"]),
   },
   mounted() {
-    this.$store.dispatch("getPhotos");
+    // this.$store.dispatch("getPhotos");
+    this.getPhotos();
   },
 };
 </script>

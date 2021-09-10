@@ -7,7 +7,7 @@ export const store = createStore({
   },
   mutations: {
     photosReceived: (state, payload) => {
-      console.log("from received", payload);
+      console.log("from received", state);
       return (state.photos = payload);
     },
   },
