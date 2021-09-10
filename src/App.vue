@@ -1,8 +1,10 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <Gallery></Gallery>
 </template>
 
 <script>
+import Gallery from "./components/Gallery.vue";
+
 export default {
   name: "App",
   components: {
