@@ -54,5 +54,8 @@ export default {
 }
 </style>
 
-// notes: // In most cases you should use a regular function with Vue,
-especially when creating: // methods // computed props // watched props
+// // notes: // In most cases you should use a regular function with Vue,
+// especially when creating: // methods // computed props // watched props
+// Mutations can only run synchronous code. If we want to run something asynchronously, we have to use actions.
+
+// Vuex can't keep track of mutations that are asynchronous since asynchronous code doesn’t run sequentially.
