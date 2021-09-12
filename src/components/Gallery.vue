@@ -6,6 +6,7 @@
     </div>
   </div>
   <div v-else>Loading ...</div>
+  <!-- <button @click="increaseQnty">add Quantity for buy</button> -->
 </template>
 <script>
 import { mapActions } from "vuex";
@@ -13,16 +14,25 @@ import { mapGetters } from "vuex";
 export default {
   name: "Gallery",
   computed: {
-    // photos() {
-    //   return this.$store.getters.photos;
+    // photos(){
+    //   // return (this.$store.getters.photos);
     // },
+
+    // WHY NOT ?
+
+    // photos:()=>{
+    //  return (this.$store.getters.photos);
+    // },
+
     ...mapGetters(["photos"]),
   },
   methods: {
     ...mapActions(["getPhotos"]),
   },
   mounted() {
+    // OR USE MAPACTIONS
     // this.$store.dispatch("getPhotos");
+
     this.getPhotos();
   },
 };
@@ -43,3 +53,6 @@ export default {
   text-align: center;
 }
 </style>
+
+// notes: // In most cases you should use a regular function with Vue,
+especially when creating: // methods // computed props // watched props
